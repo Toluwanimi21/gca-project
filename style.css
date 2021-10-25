@@ -1,0 +1,196 @@
+ * {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Red Hat Text', sans-serif;    
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: .3s;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+ }
+ 
+ body {
+     font-family: Georgia;
+     margin:0;
+     background-color: hsl(234, 17%, 12%);
+     height: 100vh;
+ }
+
+
+ .wrapper {
+     width:100%;
+     margin: 0 auto;
+     padding:0 10px;
+     max-width: 1180px;
+ }
+
+ /*h1.logo{
+    background-image: url(./access/white-logo.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height:100px;
+    text-indent: -10000px;
+    float: left;
+    margin-top: 10px;
+}*/
+
+header nav{
+    float: right;
+    cursor: pointer;
+}
+
+header nav h2 {
+    text-indent: -10000px;
+    height: 0;
+    margin: 0;
+}
+
+header nav li {
+    float: left;
+    list-style-type: none;
+    margin: 10px 20px;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+#body {
+    height:75%;
+    width: 100%;
+    background-image: url("./access/bg-stars.svg");    
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: stars-animation 5s infinite alternate;
+}
+
+@keyframes stars-animation 
+{
+    to    
+    {
+        background-position: 100% 100%;
+    }
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#time-counter {
+    display: flex;
+    justify-content: center;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    align-items: center;
+    opacity: 0;
+    animation: start-animation 1s forwards;
+    transform:scale(0);
+}
+
+@keyframes start-animation 
+{
+    to    
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.counter:nth-child(1)
+{
+    animation-delay: 0;
+}
+
+.counter:nth-child(2)
+{
+    animation-delay: 2s;
+}
+
+.counter:nth-child(3)
+{
+    animation-delay: 4s;
+}
+
+.counter:nth-child(4)
+{
+    animation-delay: 6s;
+}
+
+.number {
+    padding:15px;
+    border-radius: 5px;
+    font-size: 50px;
+    margin-bottom: 20px;
+    background-image: radial-gradient(circle at 0 50%, #191923 5%, #ffffff00 5%),
+    radial-gradient(circle at 100% 50%, #191923 5%, #ffffff00 5%),
+    linear-gradient(#2c2c44 50%, #34364f 50%);    
+    color:  hsl(345, 95%, 68%);
+    position: relative;
+    box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.1);   
+}
+
+.desc {
+    font-size: 10px;
+    color:hsl(237, 18%, 59%);
+}
+
+footer{
+    height: 25%;
+    width: 100%;
+    background-image: url("./access/pattern-hills.svg");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+}
+
+footer i {
+    font-size: 20px !important;
+    margin: 0 10px;
+    cursor: pointer;    
+    color: hsl(237, 18%, 59%);
+}
+
+footer i:hover
+{
+    color: hsl(345, 95%, 68%);
+}
+
+@media screen and (max-width: 520px)
+{
+    .number
+    {
+        font-size: 28px;
+    } 
+    .counter
+    {
+        margin: 0 5px;
+    }   
+}
+@media screen and (max-width: 350px)
+{
+    .number
+    {
+        font-size: 27px;
+    }
+}
